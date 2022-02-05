@@ -1,0 +1,23 @@
+QuorumServer {
+    org.apache.zookeeper.server.auth.DigestLoginModule required
+    user_user1="password"
+    user_user2="password";
+};
+
+QuorumLearner {
+    org.apache.zookeeper.server.auth.DigestLoginModule required
+    username="user1"
+    password="password";
+};
+
+Server {
+    org.apache.zookeeper.server.auth.DigestLoginModule required
+    user_root="password"
+    user_zookeeper="password";
+};
+
+Client {
+    org.apache.zookeeper.server.auth.DigestLoginModule required
+    username="root"
+    password="password";
+};
